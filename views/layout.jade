@@ -1,0 +1,39 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+    title #{title}: Express website
+    // Bootstrap core CSS
+    link(href='/stylesheets/bootstrap.css', rel='stylesheet')
+    // Custom styles for this template
+    link(href='/stylesheets/style.css', rel='stylesheet')
+
+  body
+    nav.navbar.navbar-fixed-tp.navbar-light.bg-faded
+      .container
+        .row
+          .col-md-12
+            a.navbar-brand(href='/') Navbar
+            button.navbar-toggler.hidden-sm-up(type='button', data-toggle='collapse', data-target='#navbar-header', aria-controls='navbar-header', aria-expanded='false', aria-label='Toggle navigation')
+            #navbar-header.collapse.navbar-toggleable-xs
+              ul.nav.navbar-nav
+                li.nav-item(class=(title === 'Home'? 'active': ''))
+                  a.nav-link(href='/')
+                    | Home 
+                    span.sr-only (current)
+                li.nav-item(class=(title === 'About'? 'active': ''))
+                  a.nav-link(href='/about') About
+                li.nav-item(class=(title === 'Contact'? 'active': ''))
+                  a.nav-link(href='/contact') Contact us
+
+    // /navbar
+    block content
+    footer
+      p &copy; 2016, All Rights Reserved
+    // Placed at the end of the document so the pages load faster
+    script(src='javascripts/jquery.min.js', integrity='sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY', crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js', integrity='sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB', crossorigin='anonymous')
+    script(src='javascripts/bootstrap.min.js')
